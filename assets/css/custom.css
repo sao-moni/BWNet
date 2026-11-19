@@ -1,0 +1,279 @@
+:root {
+    --brand: #e74c3c;
+    --brand-dark: #c0392b;
+    --accent: #f1c40f;
+    --ink: #2c3e50;
+    --muted: #7f8c8d;
+    --line: #e1e4e8;
+    --surface: #ffffff;
+    --page: #ecf0f1;
+    --ok: #27ae60;
+    --warn: #e67e22;
+    --bs-border-radius: 0;
+    --bs-border-radius-sm: 0;
+    --bs-border-radius-lg: 0;
+}
+
+* {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.btn,
+.form-control,
+.form-select,
+.input-group-text,
+.badge,
+.card,
+.modal-content,
+.toast {
+    border-radius: 0 !important;
+}
+
+.btn {
+    font-weight: 600;
+    border-width: 2px;
+}
+
+.btn-danger {
+    background: var(--brand);
+    border-color: var(--brand);
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background: var(--brand-dark);
+    border-color: var(--brand-dark);
+}
+
+.btn-outline-danger {
+    color: var(--brand);
+    border-color: var(--brand);
+}
+
+.btn-outline-danger:hover {
+    background: var(--brand);
+    border-color: var(--brand);
+}
+
+.btn-success {
+    background: var(--ok);
+    border-color: var(--ok);
+}
+
+.btn-warning {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--ink);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--ink);
+}
+
+.navbar {
+    background: var(--ink) !important;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-search {
+    width: 320px;
+}
+
+.nav-search .form-control,
+.nav-search .input-group-text {
+    background: #34495e;
+    border: 0;
+    color: #fff;
+}
+
+.nav-search .form-control::placeholder {
+    color: #bdc3c7;
+}
+
+.nav-search .form-control:focus {
+    background: #3d566e;
+    color: #fff;
+}
+
+.hero {
+    background: var(--accent);
+    color: var(--ink);
+}
+
+.hero .lead {
+    color: var(--ink);
+    opacity: .8;
+}
+
+.hero-perk {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .35rem .8rem;
+    background: var(--ink);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.hero-perk i {
+    color: var(--accent);
+}
+
+#categoryFilter .btn {
+    padding: .4rem 1rem;
+}
+
+.product-card {
+    background: var(--surface);
+    border: 0;
+    transition: outline-color .15s;
+    outline: 2px solid transparent;
+}
+
+.product-card:hover {
+    outline-color: var(--ink);
+}
+
+.product-img-wrap {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.product-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: .7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    background: var(--ink);
+    color: #fff;
+    padding: .3rem .6rem;
+}
+
+.product-card .card-title {
+    font-weight: 600;
+    min-height: 2.4em;
+}
+
+.product-price {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--brand);
+}
+
+.stock {
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--ok);
+}
+
+.stock.low {
+    color: var(--warn);
+}
+
+.stock i {
+    font-size: .5rem;
+    vertical-align: middle;
+}
+
+#cartBadge[data-count="0"] {
+    display: none;
+}
+
+#cartPanel {
+    background: var(--surface);
+    border-left: 0;
+}
+
+#cartPanel .offcanvas-header {
+    background: var(--ink);
+    color: #fff;
+    border: 0 !important;
+}
+
+#cartPanel .btn-close {
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.cart-item {
+    gap: .75rem;
+    border-color: var(--line);
+}
+
+.cart-item img {
+    border-color: var(--line) !important;
+}
+
+.cart-item .qty-btn {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    line-height: 1;
+    border-width: 1px;
+}
+
+#cartSummary {
+    background: var(--page);
+}
+
+#totalUSD {
+    color: var(--brand);
+}
+
+.pay-total {
+    background: var(--ink);
+    color: #fff;
+    padding: .9rem 1rem;
+}
+
+.modal-header {
+    background: var(--ink);
+    color: #fff;
+    border: 0;
+}
+
+.modal-header .btn-close {
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+#receiptModal .modal-header {
+    background: var(--ok) !important;
+}
+
+.toast {
+    background: var(--ink) !important;
+}
+
+@media (max-width: 575.98px) {
+    #cartPanel {
+        width: 100% !important;
+    }
+}
